@@ -15,8 +15,8 @@
 `-n` -display notifaction on desctop screen, otherwise return json:
 ``` 
 {
-  "current_price": "41.66"
-  "you_favorable_price": "39.40"
+  "current_price": "41.66",
+  "you_favorable_price": "39.40",
   "result": false
 }
 ```
