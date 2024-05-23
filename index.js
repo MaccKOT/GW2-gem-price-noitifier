@@ -34,7 +34,7 @@ const currentCourse = fetch_gemprice();
 currentCourse
 	.then((gemPrice) => {
 		if (gemPrice >= priceToSearch) {
-			console.log("Not today.");
+			console.log("Priced checked. Not today.");
 			process.exit(0);
 		}
 		const message = `Current price is ${gemPrice} gold for 100 gems.`;

@@ -4,14 +4,14 @@
 
 * Node.js > 20 (uses fetch, in older Node's its experimental)
 
-* [Guild Wars 2 API](https://wiki.guildwars2.com/wiki/API:2/commerce/exchange/coins) (no need API key for usage). Disclaimer: Prices transmitted through the official API do not always correspond to the real exchange rate in the game client and may differ.
+* [Guild Wars 2 API](https://wiki.guildwars2.com/wiki/API:2/commerce/exchange/coins) (no need API key for usage). Disclaimer: prices transmitted through the official API do not always correspond to the real exchange rate in the game client and may differ.
 
-* [node-notifier](https://github.com/mikaelbr/node-notifier) for notification in macOS, Windows and Linux
+* [node-notifier](https://github.com/mikaelbr/node-notifier) for notification in macOS, Windows and Linux.
 
 ## Usage
 
-```npm i
-node index.js <number>
+```bash
+node .\index.js <number>
 ```
 
 `<number>` - price in gold for 100 gems, you are looking for. Check [this great site](https://www.gw2tp.com/gems) for gold-gems exchange to choose a favourable exchange rate for you
