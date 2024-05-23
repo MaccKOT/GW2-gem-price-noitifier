@@ -4,7 +4,7 @@
   "description": "Simple util to check Guild Wars 2 stock exchange course with notifier",
   "main": "index.js",
   "scripts": {
-    "run": "node ./index.js"
+    "start": "node ./index.js"
   },
   "keywords": [
     "Guild Wars 2",

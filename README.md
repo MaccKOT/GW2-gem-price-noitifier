@@ -1,4 +1,4 @@
-# Simple util to check Guild Wars 2 stock exchange course with notifier
+# Simple util to check Guild Wars 2 stock exchange prices with notifier
 
 ## Tech stack
 
@@ -21,11 +21,11 @@
 }
 ```
 
-"39.40" -  price in gold for 100 gems, you looking for. Check [this site](https://www.gw2tp.com/gems) for gold-gems exchange to choose a favourable exchange rate for you
+"39.40" -  maximum price in gold for 100 gems, you looking for. Check [this site](https://www.gw2tp.com/gems) for gold-gems exchange to choose a favourable exchange rate for you
 
 ## Usage in sheduler
 
-You can use the task scheduler (cron or Windows Scheduler) in your operating system to run the utility from command line.
+You can use this util with the task scheduler (crontab or Windows Scheduler) in your operating system to run the utility from command line.
 
 windows scheduler picture
 
