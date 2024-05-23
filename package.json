@@ -1,0 +1,21 @@
+{
+  "name": "gw2-notify",
+  "version": "1.0.0",
+  "description": "Simple util to check Guild Wars 2 stock exchange course with notifier",
+  "main": "index.js",
+  "scripts": {
+    "run": "node ./index.js"
+  },
+  "keywords": [
+    "Guild Wars 2",
+    "GW2",
+    "exchange",
+    "Gold",
+    "Gems"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-notifier": "^10.0.1"
+  }
+}

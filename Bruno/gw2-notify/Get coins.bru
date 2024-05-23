@@ -1,0 +1,15 @@
+meta {
+  name: Get gem price in coins (in copper)
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://api.guildwars2.com/v2/commerce/exchange/coins?quantity=100000
+  body: none
+  auth: none
+}
+
+query {
+  quantity: 100000
+}
