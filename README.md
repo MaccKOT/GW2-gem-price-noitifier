@@ -4,26 +4,19 @@
 
 * Node.js > 20 (uses fetch, in older Node's its experimental)
 
-* [Guild Wars 2 API](https://wiki.guildwars2.com/wiki/API:2/commerce/exchange/coins) (no need API key to usage). Disclaimer: Prices transmitted through the official API do not always correspond to the real exchange rate in the game client and may differ.
+* [Guild Wars 2 API](https://wiki.guildwars2.com/wiki/API:2/commerce/exchange/coins) (no need API key for usage). Disclaimer: Prices transmitted through the official API do not always correspond to the real exchange rate in the game client and may differ.
 
-* [node-notifier](https://github.com/mikaelbr/node-notifier) for notification in MacOS, Windows and Linux
+* [node-notifier](https://github.com/mikaelbr/node-notifier) for notification in macOS, Windows and Linux
 
 ## Usage
 
-`node index.js -n "39.40"`
+`node index.js -n <number>`
 
-`-n` display notifaction on desktop screen, otherwise return json:
-```json
-{
-  "current_price": "41.66",
-  "you_favorable_price": "39.40",
-  "result": false
-}
-```
+`-n` display desktop notification
 
-"39.40" -  maximum price in gold for 100 gems, you looking for. Check [this site](https://www.gw2tp.com/gems) for gold-gems exchange to choose a favourable exchange rate for you
+`<number>` - price in gold for 100 gems, you are looking for. Check [this great site](https://www.gw2tp.com/gems) for gold-gems exchange to choose a favourable exchange rate for you
 
-## Usage in sheduler
+## Usage in scheduler
 
 You can use this util with the task scheduler (crontab or Windows Scheduler) in your operating system to run the utility from command line.
 
