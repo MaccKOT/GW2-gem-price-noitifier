@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Simple util to check Guild Wars 2 stock exchange course with notifier",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node ./index.js"
   },

@@ -1,4 +1,4 @@
-const notifier = require("node-notifier");
+import notifier from "node-notifier";
 const args = process.argv.slice(2);
 
 // input arguments validation
@@ -33,13 +33,17 @@ function desktop_notification(title, message) {
 const currentCourse = fetch_gemprice();
 currentCourse
 	.then((gemPrice) => {
-		if (gemPrice >= priceToSearch) {
-			console.log("Priced checked. Not today.");
-			process.exit(0);
+		if (gemPrice > priceToSearch) {
+			console.log(
+				`Priced checked: ${gemPrice} gold coins per 100 gems. Not today.`,
+			);
+			return;
 		}
+
 		const message = `Current price is ${gemPrice} gold for 100 gems.`;
+		console.log(`${message} Time for shopping!`);
 		desktop_notification("Time to buy GEMS in GW2!", message);
-		process.exit(0);
+		return;
 	})
 	.catch((err) => {
 		console.error(err);
