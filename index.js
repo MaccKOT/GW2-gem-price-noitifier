@@ -2,7 +2,10 @@ import notifier from "node-notifier";
 const args = process.argv.slice(2);
 
 // input arguments validation
-if (args.length === 0) console.error("There's no parameters");
+if (args.length === 0) {
+	console.error("There's no parameters");
+	process.exit(0);
+}
 try {
 	Number(args[0]).toFixed(2);
 } catch {
