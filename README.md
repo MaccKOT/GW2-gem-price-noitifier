@@ -1,4 +1,4 @@
-# Simple util to check Guild Wars 2 stock exchange prices with notifier
+# Simple Node.js util to check Guild Wars 2 stock exchange prices with notifier
 
 ## Tech stack
 
@@ -23,3 +23,5 @@ You can use this util with the task scheduler (crontab or Windows Scheduler) in 
 ## TODO
 
 * Implement message sending to you Telegram via bot
+
+* Drop out Axios, use native fetch instead

@@ -14,6 +14,7 @@ try {
 } catch {
 	console.error("Parameter is not a valid number");
 }
+
 const priceToSearch = Number(args[0]).toFixed(2);
 
 // data fetching and scrapping
@@ -36,20 +37,19 @@ function desktop_notification(title, message) {
 	});
 }
 
-const currentCourse = fetch_gemprice();
-currentCourse
+fetch_gemprice()
 	.then((gemPrice) => {
 		if (gemPrice > priceToSearch) {
 			console.log(
 				`Priced checked: ${gemPrice} gold coins per 100 gems. Not today.`,
 			);
-			return;
+			process.exit(0);
 		}
 
+		// Success
 		const message = `Current price is ${gemPrice} gold for 100 gems.`;
 		console.log(`${message} Time for shopping!`);
 		desktop_notification("Time to buy GEMS in GW2!", message);
-		return;
 	})
 	.catch((err) => {
 		console.error(err);
