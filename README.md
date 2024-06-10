@@ -2,9 +2,9 @@
 
 ## Tech stack
 
-* Node.js > 20 (uses fetch, in older Node's its experimental)
+* Node.js (axios, cheerio)
 
-* [Guild Wars 2 API](https://wiki.guildwars2.com/wiki/API:2/commerce/exchange/coins) (no need API key for usage). Disclaimer: prices transmitted through the official API do not correspond to the real exchange rate in the game client and differ. Actual prices only at [this site](https://www.gw2tp.com/gems).
+* Prices transmitted through the official API do not correspond to the real exchange rate in the game client and differ. Actual prices only at [this site](https://www.gw2tp.com/gems).
 
 * [node-notifier](https://github.com/mikaelbr/node-notifier) for notification in macOS, Windows and Linux.
 
@@ -23,5 +23,3 @@ You can use this util with the task scheduler (crontab or Windows Scheduler) in 
 ## TODO
 
 * Implement message sending to you Telegram via bot
-
-* Fetch data from <https://www.gw2tp.com/gems>, not API

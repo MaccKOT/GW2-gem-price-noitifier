@@ -1,9 +1,0 @@
-{
-  "version": "1",
-  "name": "gw2-notify",
-  "type": "collection",
-  "ignore": [
-    "node_modules",
-    ".git"
-  ]
-}

@@ -1,4 +1,7 @@
 import notifier from "node-notifier";
+import * as cheerio from "cheerio";
+import axios from "axios";
+
 const args = process.argv.slice(2);
 
 // input arguments validation
@@ -11,19 +14,19 @@ try {
 } catch {
 	console.error("Parameter is not a valid number");
 }
-
 const priceToSearch = Number(args[0]).toFixed(2);
 
-const BASE_URL =
-	"https://api.guildwars2.com/v2/commerce/exchange/coins?quantity=100000";
-
-// return price in gold for 100 gems
+// data fetching and scrapping
 async function fetch_gemprice() {
-	const response = await fetch(BASE_URL);
-	let gems_price = await response.json();
-	gems_price = (gems_price.coins_per_gem / 100).toFixed(2);
+	const response = await axios.get("https://www.gw2tp.com/");
+	const $ = cheerio.load(response.data);
+	const price = $(".formatgw2money").text();
 
-	return gems_price;
+	const gold = price.slice(0, 2);
+	const silver = price.slice(2, 4);
+	// const date = new Date().toLocaleDateString();
+
+	return Number(`${gold}.${silver}`).toFixed(2);
 }
 
 function desktop_notification(title, message) {
