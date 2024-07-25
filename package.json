@@ -7,13 +7,7 @@
 	"scripts": {
 		"start": "node ./index.js"
 	},
-	"keywords": [
-		"Guild Wars 2",
-		"GW2",
-		"exchange",
-		"Gold",
-		"Gems"
-	],
+	"keywords": ["Guild Wars 2", "GW2", "exchange", "Gold", "Gems"],
 	"author": "",
 	"license": "ISC",
 	"dependencies": {

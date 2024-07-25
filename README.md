@@ -11,7 +11,7 @@
 ## Usage
 
 ```bash
-node .\index.js <number>
+node index.js <number>
 ```
 
 `<number>` - price in gold for 100 gems, you are looking for. Check [this site](https://www.gw2tp.com/gems) for gold-gems exchange to choose a favourable exchange rate for you
@@ -21,6 +21,8 @@ node .\index.js <number>
 You can use this util with the task scheduler (crontab or Windows Scheduler) in your operating system to run the utility from command line.
 
 ## TODO
+
+* Save log in txt file
 
 * Implement message sending to you Telegram via bot
 

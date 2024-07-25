@@ -41,7 +41,7 @@ fetch_gemprice()
 	.then((gemPrice) => {
 		if (gemPrice > priceToSearch) {
 			console.log(
-				`Priced checked: ${gemPrice} gold coins per 100 gems. Not today.`,
+				`Price checked: ${gemPrice} gold coins per 100 gems. Not today.`,
 			);
 			process.exit(0);
 		}
