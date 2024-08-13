@@ -1,6 +1,5 @@
 import notifier from "node-notifier";
 import * as cheerio from "cheerio";
-import axios from "axios";
 
 const args = process.argv.slice(2);
 
@@ -19,13 +18,15 @@ const priceToSearch = Number(args[0]).toFixed(2);
 
 // data fetching and scrapping
 async function fetch_gemprice() {
-	const response = await axios.get("https://www.gw2tp.com/");
-	const $ = cheerio.load(response.data);
+	const response = await fetch("https://www.gw2tp.com/");
+	const data = await response.text();
+	const $ = cheerio.load(data);
 	const price = $(".formatgw2money").text();
 
 	const gold = price.slice(0, 2);
 	const silver = price.slice(2, 4);
-	// const date = new Date().toLocaleDateString();
+	if (Number.isNaN(gold) || Number.isNaN(silver))
+		throw new Error("Unable to translate price into a number");
 
 	return Number(`${gold}.${silver}`).toFixed(2);
 }
