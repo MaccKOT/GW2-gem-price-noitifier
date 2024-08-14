@@ -2,7 +2,7 @@
 
 ## Tech stack
 
-* Node.js (axios, cheerio)
+* Node.js (cheerio)
 
 * Prices transmitted through the official API do not correspond to the real exchange rate in the game client and differ. Actual prices only at [this site](https://www.gw2tp.com/gems).
 
@@ -26,4 +26,4 @@ You can use this util with the task scheduler (crontab or Windows Scheduler) in 
 
 * Implement message sending to you Telegram via bot
 
-* Drop out Axios, use native fetch instead
+* Implement some tests (vitest)
