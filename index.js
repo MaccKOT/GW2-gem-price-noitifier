@@ -12,6 +12,11 @@ try {
 	Number(args[0]).toFixed(2);
 } catch {
 	console.error("Parameter is not a valid number");
+	process.exit(0);
+}
+if (Number.isNaN(Number(args[0]).toFixed(2))) {
+	console.error("Parameter is not a valid number");
+	process.exit(0);
 }
 
 const priceToSearch = Number(args[0]).toFixed(2);
@@ -38,8 +43,14 @@ function desktop_notification(title, message) {
 	});
 }
 
+// Main executable
+
 fetch_gemprice()
 	.then((gemPrice) => {
+		if (Number.isNaN(Number(priceToSearch))) {
+			console.error("Input data not a number");
+			process.exit(0);
+		}
 		if (gemPrice > priceToSearch) {
 			console.log(
 				`Price checked: ${gemPrice} gold coins per 100 gems. Not today.`,
@@ -50,7 +61,7 @@ fetch_gemprice()
 		// Success
 		const message = `Current price is ${gemPrice} gold for 100 gems.`;
 		console.log(`${message} Time for shopping!`);
-		desktop_notification("Time to buy GEMS in GW2!", message);
+		desktop_notification("Time to buy GEMS 💎 in GW2!", message);
 	})
 	.catch((err) => {
 		console.error(err);
